@@ -1,0 +1,14 @@
+[Unit]
+Description=My demon for sql
+After=network.target
+After=mysql.service
+Requires=mysql.service
+
+[Service]
+Type=simple
+User=root
+ExecStart=/home/serhii/Scripts/data_base_migration.sh
+
+[Install]
+WantedBy=multi-user.target
+
